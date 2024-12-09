@@ -1,5 +1,15 @@
-precheck_results
+/.idea/
+/precheck_results/
+*/tmp
+*/*/tmp
 *.hex*
 *.lst
 *.vcd
 *.gtkw
+/env
+/venv
+/caravel
+/dependencies
+/mgmt_core_wrapper
+/logs
+venv-cocotb
