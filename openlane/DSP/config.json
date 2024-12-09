@@ -15,10 +15,10 @@
     "GLB_RESIZER_TIMING_OPTIMIZATIONS": 1,
     "//": "seems important",
     "FP_SIZING": "absolute",
-    "DIE_AREA": "0 0 223.5 453.5",
+    "DIE_AREA": "0 0 223.5 450",
 
-    "FP_IO_VEXTEND": 1.5,
-   "FP_IO_HEXTEND": 1.5,
+    "FP_IO_VEXTEND": 0.2,
+   "FP_IO_HEXTEND": 0.2,
    
     "CLOCK_PERIOD": "40",
     "CLOCK_PORT": "UserCLK",
