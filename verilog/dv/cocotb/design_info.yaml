@@ -1,0 +1,9 @@
+CARAVEL_ROOT: /home/asma/Desktop/open_eFPGA_v2/caravel
+MCW_ROOT: /home/asma/Desktop/open_eFPGA_v2/mgmt_core_wrapper
+PDK: sky130A
+PDK_ROOT: /home/asma/Desktop/open_eFPGA_v2/dependencies/pdks
+USER_PROJECT_ROOT: /home/asma/Desktop/open_eFPGA_v2
+caravan: false
+clk: 25
+emailto:
+- null
