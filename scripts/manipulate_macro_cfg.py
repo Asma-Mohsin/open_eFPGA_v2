@@ -33,7 +33,8 @@ def clip_to_next_multiple(offset, pitch):
     Returns:
         int: The smallest multiple of pitch greater than or equal to the offset.
     """
-    if offset < 0 or pitch <= 0:
+    # if offset < 0 or pitch <= 0:
+    if pitch <= 0:
         raise ValueError("Offset must be non-negative and pitch must be positive.")
 
     return ((offset + pitch - 1) // pitch) * pitch
@@ -142,7 +143,7 @@ def change_space_between_tiles_vertical(tiles, space, pdn_pitch, start_bot=True)
         list: The modified list of tiles with updated y-coordinates.
     """
     print(f"""\033[93mWARNING: Changed vertical space between tiles. Make sure to
-        adjust the height of all supertiles by {int(space)}!\033[0m""")
+        adjust the height of all supertiles by {space:.1f}!\033[0m""")
     # Group tiles by their y-coordinate (rows)
     rows = {}
     rams = {}
@@ -286,7 +287,7 @@ def write_tiles_to_file(tiles, file_path):
     """
     with open(file_path, "w") as f:
         for tile in tiles:
-            line = f"{tile['name']} {int(tile['x'])} {int(tile['y'])} {tile['flip']}\n"
+            line = f"{tile['name']} {tile['x']:.1f} {tile['y']:.1f} {tile['flip']}\n"
             f.write(line)
 
 def main():
@@ -296,10 +297,10 @@ def main():
     # origin = (2400, 245)  # Rotation origin (x, y)
     origin = (150, 50)  # Rotation origin (x, y)
     angle = -90  # Rotation angle in degrees
-    x_offset = 100
-    y_offset = 100
-    x_space_offset = 5 
-    y_space_offset = 1
+    x_offset = 0
+    y_offset = 0
+    x_space_offset = 5
+    y_space_offset = -3.5 
     pdn_pitch_vertical = 75
 
     # x_start = 6
@@ -311,14 +312,15 @@ def main():
     # tiles = change_space_between_tiles_horizontal(tiles, x_space_offset, False,
     #                                               x_start, x_stop)
     #FIXME: This is just a workaround, function does not work correctly
-    x_start = 9
-    x_stop = 0
-    # tiles = change_space_between_tiles_horizontal(tiles, x_space_offset, False,
-    #                                             x_start, x_stop)
+    x_start = 7
+    x_stop = 5
     tiles = change_space_between_tiles_horizontal(tiles, x_space_offset, False,
-                                            x_start, x_stop)
-    # tiles = change_space_between_tiles_vertical(tiles, y_space_offset, pdn_pitch_vertical)
+                                                 x_start, x_stop)
+    # tiles = change_space_between_tiles_horizontal(tiles, x_space_offset, False,
+    #                                         x_start, x_stop)
     # move_tiles(tiles, x_offset, y_offset)
+    # tiles = change_space_between_tiles_vertical(tiles, y_space_offset,
+    #                                             pdn_pitch_vertical)
 
     # Rotate the tiles around the given origin
     # tiles = rotate_tiles(tiles, origin, angle)
