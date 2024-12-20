@@ -54,6 +54,10 @@ module eFPGA_top #(
         .desync_flag(desync_flag),
         .FrameBitsPerRow(FrameBitsPerRow)
     ) eFPGA_Config_inst (
+`ifdef USE_POWER_PINS
+        .vccd1(vccd1),  // User area 1 1.8V supply
+        .vssd1(vssd1),  // User area 1 digital ground
+`endif
         .CLK(CLK),
         .resetn(resetn),
         .Rx(Rx),
