@@ -24,6 +24,7 @@ SOURCE_DIRS=(
     "RegFile"
     "W_IO"
     "LUT4AB"
+    "BRAM"
 )
 
 # Ensure script is executed from the project root
