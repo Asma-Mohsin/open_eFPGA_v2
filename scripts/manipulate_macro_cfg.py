@@ -297,7 +297,7 @@ def main():
     # origin = (2400, 245)  # Rotation origin (x, y)
     origin = (150, 50)  # Rotation origin (x, y)
     angle = -90  # Rotation angle in degrees
-    x_offset = 0
+    x_offset = -113 
     y_offset = 0
     x_space_offset = 5
     y_space_offset = -3.5 
@@ -311,14 +311,13 @@ def main():
     #
     # tiles = change_space_between_tiles_horizontal(tiles, x_space_offset, False,
     #                                               x_start, x_stop)
-    #FIXME: This is just a workaround, function does not work correctly
-    x_start = 7
-    x_stop = 5
-    tiles = change_space_between_tiles_horizontal(tiles, x_space_offset, False,
-                                                 x_start, x_stop)
+    # x_start = 7
+    # x_stop = 5
+    # tiles = change_space_between_tiles_horizontal(tiles, x_space_offset, False,
+                                                 # x_start, x_stop)
     # tiles = change_space_between_tiles_horizontal(tiles, x_space_offset, False,
     #                                         x_start, x_stop)
-    # move_tiles(tiles, x_offset, y_offset)
+    move_tiles(tiles, x_offset, y_offset)
     # tiles = change_space_between_tiles_vertical(tiles, y_space_offset,
     #                                             pdn_pitch_vertical)
 
