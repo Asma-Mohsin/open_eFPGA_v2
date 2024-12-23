@@ -8,4 +8,4 @@ This repo experiments an implementation of an eFPGA from RTL to GDS with open Sk
 
 The fabrics were fully implemented using the [OpenLane flow](https://github.com/The-OpenROAD-Project/OpenLane.git) then integrated onto [eFabless caravel](https://github.com/efabless/caravel_user_project.git).   
 
-<img src="Fabric.png" alt="Description" width="650" height="750"/>
+<img src="Fabric_1.png" alt="Description" width="650" height="750"/>
